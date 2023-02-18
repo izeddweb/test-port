@@ -86,7 +86,7 @@ header {
 /*          endlogo      */
 
 .navbar {
-  width: 100%;
+  width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,12 +95,10 @@ header {
 .text-anim {
   height: 40%;
   width: 100%;
-  /* background-color: #fff; */
-  /* border: inset 5px rgb(76, 149, 76) ; */
 }
 .text-anim-inside {
   z-index: 1111;
-  height: 100%;
+  height: 110%;
   width: 100%;
   border: inset 5px rgb(1, 0, 0) ;
   border-radius: 8px;
@@ -109,10 +107,10 @@ header {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   background-color: transparent;
+  box-shadow: 3px 3px 2px 10px rgb(0, 0, 0);
 }
 
 .list {
-  /* margin-top: 39px; */
   background-color: black;
   display: flex;
   justify-content: space-around;
@@ -165,6 +163,8 @@ header {
   opacity: 1;
 }
 /*star switch mode*/
+
+
 .sun-mode-btn {
   left: 0;
   background: url(/img/sun.jpeg) center no-repeat;
@@ -172,7 +172,13 @@ header {
 .sun-mode-content-btn {
   background: url(/img/sun-hd.jpeg) center no-repeat;
 }
-
+.moon-mode-btn {
+  left: 0;
+  background: url(/img/moon.jpeg) center no-repeat;
+}
+.moon-mode-content-btn {
+  background: url(/img/moon-hd.jpeg) center no-repeat;
+}
 .switch-mode {
   width: 10%;
   background-color: var(--black);
@@ -193,7 +199,7 @@ header {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
   position: relative;
-  background: url(/img/moon-hd.jpeg) center no-repeat;
+  /* background: url(/img/moon-hd.jpeg) center no-repeat; */
   background-size: cover;
 }
 
@@ -203,7 +209,7 @@ header {
   width: 50%;
   height: 80%;
   margin: 0 5px;
-  background: url(/img/moon.jpeg) center;
+  /* background: url(/img/moon.jpeg) center; */
   background-color: #fff;
   background-size: cover;
   border-radius: 50px;

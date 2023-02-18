@@ -13,11 +13,44 @@ items.forEach(function (ele) {
 });
 // set switch mode
 let contentMode = document.querySelector(".switch-mode div");
-let btnSwitchMode = document.querySelector(".switch-mode div .btn");
+let btnSwitchMode = document.querySelector(".switch-mode div button");
+let classeBtn = btnSwitchMode.classList.value;
+let classeContentBtn = contentMode.classList.value;
+console.log(classeContentBtn);
 
-//  1 way
-btnSwitchMode.onclick = function () {
-  btnSwitchMode.classList.toggle('sun-mode-btn')
-  contentMode.classList.toggle('sun-mode-content-btn')
-};
+//  2 way
 
+btnSwitchMode.onclick = function() {
+  if(classeContentBtn === 'moon-mode-content-btn') {
+    contentMode.classList.replace('moon-mode-content-btn','sun-mode-content-btn');
+    btnSwitchMode.onclick = function() {
+      if(classeContentBtn === 'moon-mode-content-btn') {
+        contentMode.classList.replace('sun-mode-content-btn','moon-mode-content-btn')
+      }
+    }
+  }
+}
+  
+
+// btnSwitchMode.onclick = function() {
+//   if (classeContentBtn === 'moon-mode-content-btn') {
+//     contentMode.classList.replace('moon-mode-content-btn','sun-mode-content-btn')
+//   }else {
+//     contentMode.classList.replace('sun-mode-content-btn','moon-mode-content-btn')
+
+//   }
+
+  
+// }
+
+
+
+
+
+
+ // 1 way
+// btnSwitchMode.onclick = function () {
+//     btnSwitchMode.classList.toggle('sun-mode-btn')
+//     contentMode.classList.toggle('sun-mode-content-btn')
+//   };
+  
